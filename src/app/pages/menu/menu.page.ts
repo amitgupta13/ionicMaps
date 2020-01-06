@@ -9,7 +9,8 @@ import { Router, RouterEvent } from "@angular/router";
 export class MenuPage implements OnInit {
   pages = [
     { title: "First Page", url: "/menu/first" },
-    { title: "Second Page", url: "/menu/second" }
+    { title: "Second Page", url: "/menu/second" },
+    { title: "Third Page with tabs", url: "/menu/third" }
   ];
 
   selectedPath = "";
