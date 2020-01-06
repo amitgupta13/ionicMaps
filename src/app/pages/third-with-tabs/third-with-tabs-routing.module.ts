@@ -7,7 +7,14 @@ const routes: Routes = [
   {
     path: "",
     component: ThirdWithTabsPage,
+    // redirectTo: "tab1",
+    // pathMatch: "full",
     children: [
+      {
+        path: "",
+        redirectTo: "tab1",
+        pathMatch: "full"
+      },
       {
         path: "tab1",
         loadChildren: () =>
@@ -19,11 +26,12 @@ const routes: Routes = [
           import("../tab2/tab2.module").then(m => m.Tab2PageModule)
       }
     ]
-  },
-  {
-    path: "",
-    redirectTo: "third/tab1"
   }
+  // {
+  //   path: "",
+  //   redirectTo: "third/tab1",
+  //   pathMatch: "full"
+  // }
 ];
 
 @NgModule({
